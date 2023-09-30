@@ -340,39 +340,27 @@ Vue.component('generic-container', {
   
   ]
   
- for (let i = 0; i < exercises.length; i++) {
-
+  exercises.forEach((exercise, index) => {
     new Vue({
-      el: `#ejercicio${i + 1}`,
+      
+      el: `#ejercicio${index + 1}`,
+
       data: {
-
-       
-        
-        title: exercises[i].title,
-       data: exercises[i].data,
-  
+        title: exercise.title,
+        data: exercise.data
       },
-      methods:{
 
-        ...exercises[i].methods//operador spread
+      methods: exercise.methods || {}//por si esta vacio
 
-      }
-    });
-  } 
+    })
+
+  })
   
-  new Vue(
-{
+  new Vue({
     el:`#app`,
     data:{
-
         titulo:'TALLER JAVASCRIPT DAVID-DAYANNA'
-
     }
-
-
-}
-
-
-  )
+})
 
  
