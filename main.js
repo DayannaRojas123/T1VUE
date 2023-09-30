@@ -16,8 +16,10 @@ Vue.component('generic-container', {
     },
     template: `
      
-        <h2>{{ title }}</h2>
-        <slot></slot>
+    <div>
+    <h2>{{ title }}</h2>
+    <slot></slot>
+  </div>
       
     `
   })
@@ -36,7 +38,8 @@ Vue.component('generic-container', {
     {
       title: 'Ejercicio 2',
       data: {
-        // Agregar aquí los datos necesarios para el ejercicio 2
+       
+        
       },
       methods: {
         // Agregar aquí los métodos necesarios para el ejercicio 2
