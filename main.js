@@ -9,10 +9,17 @@ Vue.component('generic-container', {
         type: Object,
         required: true
       },
-      methods: {
+      /* methods: {
         type: Object,
         required: true
-      }
+      } *//* ,
+      computed:{
+
+        type:Object,
+        required: true
+
+
+      } */
     },
     template: `
      
@@ -38,12 +45,24 @@ Vue.component('generic-container', {
     {
       title: 'Ejercicio 2',
       data: {
-       
+      
+        radio: 0,
+    
         
       },
       methods: {
-        // Agregar aquí los métodos necesarios para el ejercicio 2
-      }
+
+        calcularArea(){
+
+        return (Math.PI * Math.pow(this.data.radio,2)) 
+    
+
+        }
+
+        
+      
+      },
+     
     },
     {
         title: 'Ejercicio 3',
@@ -300,17 +319,25 @@ Vue.component('generic-container', {
   
   ]
   
-  
-  for (let i = 0; i < exercises.length; i++) {
+ for (let i = 0; i < exercises.length; i++) {
+
     new Vue({
       el: `#ejercicio${i + 1}`,
       data: {
+
+       
+        
         title: exercises[i].title,
-        data: exercises[i].data,
-        methods: exercises[i].methods,
+       data: exercises[i].data,
+  
+      },
+      methods:{
+
+        ...exercises[i].methods//operador spread
+
       }
     });
-  }
+  } 
   
   new Vue(
 {
@@ -326,3 +353,5 @@ Vue.component('generic-container', {
 
 
   )
+
+ 
