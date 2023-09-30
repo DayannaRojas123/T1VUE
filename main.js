@@ -23,7 +23,7 @@ Vue.component('generic-container', {
     },
     template: `
      
-    <div>
+    <div style="width: 100%;height: 100%;">
     <h2>{{ title }}</h2>
     <slot></slot>
   </div>
@@ -46,7 +46,7 @@ Vue.component('generic-container', {
       title: 'Ejercicio 2',
       data: {
       
-        radio: 0,
+        radio:0,
         mostrar: false
     
         
@@ -56,7 +56,8 @@ Vue.component('generic-container', {
         calcularArea(){
 
          this.data.mostrar=true
-        return (Math.PI * Math.pow(this.data.radio,2)) 
+        
+        return (Math.PI * Math.pow(parseFloat(this.data.radio),2)) 
     
 
         }
@@ -69,19 +70,37 @@ Vue.component('generic-container', {
     {
         title: 'Ejercicio 3',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 1
+         
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 1
+        
         }
       },
       {
         title: 'Ejercicio 4',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          n1:0,
+          n2:0,
+         
+          resultadoSuma:0,
+          resultadoResta:0
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          sumarNumeros(){
+
+          return  resultadoSuma=(parseFloat(this.data.n1))+(parseFloat(this.data.n2))
+           
+    
+
+          },
+          
+          restarNumeros(){
+           
+          return  resultadoResta=(parseFloat(this.data.n1))-(parseFloat(this.data.n2))
+          
+           
+
+          }
         }
       },
       {

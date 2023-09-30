@@ -34,7 +34,7 @@
     <generic-container  :title="title" :data="data" >
 
  <br>
-      <label for="inputRadio">ingrese el radio del circulo</label>
+      <label for="inputRadio">ingrese el radio del circulo:</label>
       <input type="number" id="inputRadio" v-model='data.radio'>
       <button v-on:click="calcularArea">Resultado</button>
       <br>
@@ -56,7 +56,18 @@
   
   </div>
   <div id="ejercicio4"  class="container" >
-    <generic-container :title="title" :data="data" >
+    <generic-container :title="title" :data="data">
+      <br>
+      <label for="inputN1">ingrese el numero 1:</label>
+     <input type="number" id="inputN1" v-model="data.n1"> 
+     <br>
+     <br>
+     <label for="inputN2">ingrese el numero 2:</label>
+     <input type="number" id="inputN2" v-model="data.n2">
+     <br>
+<h4> el resultado de la suma es: {{sumarNumeros()}}</h4>
+     <br>
+  <h4> el resultado de la resta es: {{restarNumeros()}}</h4>
       
      
     </generic-container>
