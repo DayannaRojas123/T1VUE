@@ -47,6 +47,7 @@ Vue.component('generic-container', {
       data: {
       
         radio: 0,
+        mostrar: false
     
         
       },
@@ -54,6 +55,7 @@ Vue.component('generic-container', {
 
         calcularArea(){
 
+         this.data.mostrar=true
         return (Math.PI * Math.pow(this.data.radio,2)) 
     
 
