@@ -75,6 +75,8 @@
   </div>
   <div id="ejercicio5"  class="container" >
     <generic-container  :title="title" :data="data" >
+
+
       
      
     </generic-container>
@@ -83,6 +85,15 @@
   <div id="ejercicio6"  class="container" >
     <generic-container  :title="title" :data="data" >
       
+      <br>
+      <label for="inputAltura">ingrese la altura del triangulo:</label>
+     <input type="number" id="inputAltura" v-model="data.altura"> 
+     <br><br>
+      <label for="inputBase">ingrese la base del triangulo:</label>
+     <input type="number" id="inputBase" v-model="data.base"> 
+     <br>
+     <button v-on:click="calcularAreaTriangulo()">OK</button>
+     <h4> el area del triangulo es: {{data.area}}</h4>
      
     </generic-container>
   

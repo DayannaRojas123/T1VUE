@@ -115,10 +115,19 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 6',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          area:0,
+          altura:0,
+          base:0
+        
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          calcularAreaTriangulo(){
+            
+
+            this.data.area=( parseFloat(this.data.altura)*parseFloat(this.data.base))/2
+           
+
+          }
         }
       },
       {
