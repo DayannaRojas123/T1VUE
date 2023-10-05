@@ -46,7 +46,7 @@ Vue.component('generic-container', {
       title: 'Ejercicio 2',
       data: {
       
-        radio:0,
+        radio:null,
         mostrar: false
     
         
@@ -80,7 +80,7 @@ Vue.component('generic-container', {
         title: 'Ejercicio 4',
         data: {
           n1:0,
-          n2:0,
+          n2:0
          
         },
         methods: {
@@ -94,6 +94,7 @@ Vue.component('generic-container', {
           
           restarNumeros(){
            
+         
           return (parseFloat(this.data.n1))-(parseFloat(this.data.n2))
           
            
@@ -113,9 +114,9 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 6',
         data: {
-          area:0,
-          altura:0,
-          base:0
+          area:null,
+          altura:null,
+          base:null
         
         },
         methods: {
@@ -294,10 +295,24 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 12',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+         n10:[1,2,3,4,5,6,7,8,9,10]
+
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          
+          sumatoria(){
+
+            let cont=0
+
+            this.data.n10.forEach(n => {
+
+              cont +=n
+              
+            })
+
+         return cont
+
+          }
         }
       },
       {
