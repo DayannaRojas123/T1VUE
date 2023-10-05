@@ -142,11 +142,45 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 8',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          serie:[1, 2, 3, 4, 5, 6, 7],
+          numero:'',
+           cont:0,
+           bo:true
+          
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
-        }
+
+     
+          
+          mostrarnum(){
+
+         
+              setInterval(()=>{
+
+                if(this.data.cont<7){
+  
+                  this.data.numero+=' '+this.data.serie[this.data.cont]
+    
+                  
+                  this.data.cont++
+       
+                    
+                  
+    
+                }
+                
+              
+  
+              },960)
+
+
+            
+            
+          }
+
+        },
+        
+
       },
       {
         title: 'Ejercicio 9',

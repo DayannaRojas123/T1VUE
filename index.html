@@ -100,6 +100,7 @@
   </div>
   <div id="ejercicio7"  class="container" >
     <generic-container  :title="title" :data="data" >
+ 
       
      
     </generic-container>
@@ -107,7 +108,12 @@
   </div>
   <div id="ejercicio8"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
+
+      <h5>los numeros{{mostrarnum()}}</h5>
+      <h4> {{data.numero}}</h4>
+
+
+     <!--  <h4 v-for="numero in data.serie":key="numero">{{numero}}</h4> -->
      
     </generic-container>
   
