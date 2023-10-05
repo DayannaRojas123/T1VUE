@@ -106,10 +106,10 @@
     </generic-container>
   
   </div>
-  <div id="ejercicio8"  class="container" >
+  <div id="ejercicio8"  class="container">
     <generic-container  :title="title" :data="data" >
 
-      <h5>los numeros{{mostrarnum()}}</h5>
+      <h5 >los numeros{{mostrarnum()}}</h5>
       <h4> {{data.numero}}</h4>
 
 
@@ -127,7 +127,35 @@
   </div>
   <div id="ejercicio10"  class="container" >
     <generic-container  :title="title" :data="data" >
+
+      <br>
       
+
+        
+      <label for="v1">ingrese valor 1</label>
+      <input type="number" id="v1" v-model="data.v1" >
+ <br>
+ <br>
+       <label for="v2">ingrese valor 2</label>
+         <input type="number" id="v2" v-model="data.v2"  >
+ 
+ <br><br>
+       <label for="v3">ingrese valor 3</label>
+       <input type="number" id="v3" v-model="data.v3"  >
+ <br><br>
+ <button  v-on:click="validarNum">resultado</button>
+<br>
+<div id="marcador"></div>
+
+      
+
+<!-- v-bind:disabled="data.disable" -->
+
+
+
+
+
+
      
     </generic-container>
   

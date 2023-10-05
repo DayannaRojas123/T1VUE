@@ -82,13 +82,11 @@ Vue.component('generic-container', {
           n1:0,
           n2:0,
          
-          resultadoSuma:0,
-          resultadoResta:0
         },
         methods: {
           sumarNumeros(){
 
-          return  resultadoSuma=(parseFloat(this.data.n1))+(parseFloat(this.data.n2))
+          return (parseFloat(this.data.n1))+(parseFloat(this.data.n2))
            
     
 
@@ -96,7 +94,7 @@ Vue.component('generic-container', {
           
           restarNumeros(){
            
-          return  resultadoResta=(parseFloat(this.data.n1))-(parseFloat(this.data.n2))
+          return (parseFloat(this.data.n1))-(parseFloat(this.data.n2))
           
            
 
@@ -145,7 +143,7 @@ Vue.component('generic-container', {
           serie:[1, 2, 3, 4, 5, 6, 7],
           numero:'',
            cont:0,
-           bo:true
+          
           
         },
         methods: {
@@ -154,30 +152,47 @@ Vue.component('generic-container', {
           
           mostrarnum(){
 
-         
-              setInterval(()=>{
+            
+            
+           
 
-                if(this.data.cont<7){
+           setInterval(()=>{
+
+            if(this.data.cont<7){
   
-                  this.data.numero+=' '+this.data.serie[this.data.cont]
-    
-                  
-                  this.data.cont++
-       
-                    
-                  
-    
-                }
-                
+              this.data.numero+=' '+this.data.serie[this.data.cont]
+
               
+              this.data.cont++
+   
+            }
+          
   
-              },960)
+              },1000)
+
+
+
+              document.getElementById('ejercicio8').addEventListener('mouseover', () => {
+             
+                this.data.cont = 0
+
+                
+                this.data.numero = ''
+
+              });
+
+           
+              
+
+
+            
+         
+             
 
 
             
             
           }
-
         },
         
 
@@ -194,10 +209,77 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 10',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          v1:null,
+          v2:null,
+          v3:null,
+          //disable:false
+       
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+
+          
+          mayorYmenor(numeros){
+
+            const contenedorH4 = document.getElementById("marcador")
+            contenedorH4.innerHTML = ''
+
+            let mayor = Math.max(...numeros)
+            let menor = Math.min(...numeros)
+
+           /*  let conjunto=Array.from(numeros)
+            let mayor = conjunto[0];
+            let menor = conjunto[0];
+
+
+            for (let i = 0; i < conjunto.length; i++) {
+              if (conjunto[i] > mayor) {
+                mayor = conjunto[i];
+              } else if (conjunto[i] < menor) {
+                menor = conjunto[i];
+              }
+            }
+ */
+
+
+            const  h4Mayor = document.createElement("h4")
+            const br= document.createElement('br')
+            h4Mayor.textContent = `el numero mayor es: ${mayor}`
+            const h4Menor = document.createElement("h4")
+            h4Menor.textContent = `el numero menor es: ${menor}`
+      
+            
+          
+      
+           
+           contenedorH4.appendChild(h4Mayor);
+           contenedorH4.appendChild(br);
+            contenedorH4.appendChild(h4Menor);
+    
+
+           //contenedorH4.parentNode.insertBefore(nuevoH4, contenedorH4)
+
+          },
+
+          validarNum(){
+
+            
+            const numeros= new Set([this.data.v1,this.data.v2,this.data.v3])
+
+            if (numeros.size != 3) {
+             alert('los numeros no se pueden repetir')
+             //this.data.disable=true
+            this.data.v1=null
+            this.data.v2=null
+            this.data.v3=null
+  
+            }else{
+
+              this.mayorYmenor(numeros)
+            }
+
+
+          },
+          
         }
       },
       {
