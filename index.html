@@ -93,6 +93,7 @@
      <input type="number" id="inputBase" v-model="data.base"> 
      <br>
      <button v-on:click="calcularAreaTriangulo()">OK</button>
+     <br>
      <h4> el area del triangulo es: {{data.area}}</h4>
      
     </generic-container>
@@ -186,6 +187,11 @@
   <div id="ejercicio14"  class="container" >
     <generic-container  :title="title" :data="data" >
       
+      <br>
+      
+      <h5>sumatoria</h5>
+      <h4>la suma de los numero enteros pares es: {{sumatoriaPar()}}</h4>
+
      
     </generic-container>
   
@@ -199,7 +205,16 @@
   </div>
   <div id="ejercicio16"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
+      <br>
+      <label for="c1">ingrese la longitud del cateto 1:</label>
+      <input type="number" id="c1" v-model="data.c1">
+      <br> <br>
+      <label for="c2">ingrese la longitud del cateto 2:</label>
+      <input type="number" id="c2" v-model="data.c2">
+      <br>
+      <button v-on:click="hipotenusa()">calcular</button>
+      <br>
+      <h4>la hipotenusa del triangulo rectangulo es: {{data.hipotenusa}}</h4>
      
     </generic-container>
   
@@ -213,7 +228,11 @@
   </div>
   <div id="ejercicio18"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
+      <br>
+      <label for="n">ingrese un numero:</label>
+      <input type="number" id="n" v-model="data.n">
+      <br>
+      <h4>el numero ingresado es {{parImpar()}}</h4>
      
     </generic-container>
   

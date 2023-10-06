@@ -330,7 +330,25 @@ Vue.component('generic-container', {
           // Agregar aquí los datos necesarios para el ejercicio 2
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          
+          sumatoriaPar(){
+
+            let cont=0
+
+            for (let i = 0; i < 101; i++) {
+            
+            if(i%2==0){
+
+              cont+=i
+            }
+              
+            }
+
+            return cont
+
+
+          }
+
         }
       },
       {
@@ -345,10 +363,19 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 16',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+         c1:null,
+         c2:null,
+         hipotenusa:''
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+         
+          hipotenusa(){
+
+           this.data.hipotenusa= Math.sqrt(Math.pow(this.data.c1, 2) + Math.pow(this.data.c2, 2))
+
+
+
+          }
         }
       },
       {
@@ -363,10 +390,31 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 18',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          n:null
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          parImpar(){
+
+            if(this.data.n !=null){
+
+              if(this.data.n%2==0){
+
+              return 'par'
+
+
+            }else{
+              return 'impar'
+            }
+
+
+
+
+            }
+
+            
+
+          }
+
         }
       },
       {
