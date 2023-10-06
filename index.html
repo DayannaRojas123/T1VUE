@@ -246,7 +246,14 @@
   </div>
   <div id="ejercicio20"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
+      <br>
+      <label for="num1"></label>
+      <input type="number" id="num1" v-model="data.num1">
+      <br><br>
+      <label for="num2"></label>
+      <input type="text" id="num2" v-model="data.num2">
+      <br>
+      <h4>los numeros ordenados son: {{ordenar()}}</h4>
      
     </generic-container>
   

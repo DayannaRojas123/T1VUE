@@ -429,10 +429,18 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 20',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          num1:null,
+          num2:null
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+
+          ordenar(){
+
+            return [Math.min(this.data.num1, this.data.num2), Math.max(this.data.num1, this.data.num2)]
+
+          }
+          
+
         }
       },
       {
