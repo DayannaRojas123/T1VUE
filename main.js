@@ -523,10 +523,34 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 26',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          nombre:'',
+          nt1:null,
+          nt2:null,
+          nt3:null,
+          mostrar:false,
+          aprobo:'',
+          ntFinal:null
+
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          notaFinal(){
+
+
+            this.data.ntFinal=(this.data.nt1*(33/100))+(this.data.nt2*(33/100))+(this.data.nt3*(34/100))
+           
+            console.log(this.data.ntFinal)
+            if(this.data.ntFinal>=3){
+
+              this.data.aprobo='aprobado'
+
+            }else{
+
+              this.data.aprobo='desaprobo'
+            }
+
+            this.data.mostrar=true
+
+          }
         }
       },
       {

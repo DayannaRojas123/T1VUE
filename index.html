@@ -308,8 +308,28 @@
   </div>
   <div id="ejercicio26"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
-     
+      <br>
+      <label for="nombre">ingrese el nombre del estudiante:</label>
+      <input type="text" id="nombre" v-model="data.nombre">
+      <br>  <br>
+      <label for="nt1">nota 1:</label>
+     <input type="number" id="nt1" v-model="data.nt1">
+     <br>
+     <br>
+     <label for="nt2">nota 2:</label>
+    <input type="number" id="nt2" v-model="data.nt2">
+    <br> <br>
+    <label for="nt3">nota 3:</label>
+   <input type="number" id="nt3" v-model="data.nt3">
+   <br> <br>
+   <button v-on:click="notaFinal()">resultado</button>
+   <br>
+   <h4 v-if="data.mostrar==true">estudiante: {{data.nombre}}</h4>
+   <br>
+   <h4 v-if="data.mostrar==true">nota final: {{data.ntFinal}}</h4>
+   <br>
+   <h4 v-if="data.mostrar==true">{{data.aprobo}}</h4>
+
     </generic-container>
   
   </div>
