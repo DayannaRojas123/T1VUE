@@ -267,6 +267,8 @@
   </div>
   <div id="ejercicio22"  class="container" >
     <generic-container  :title="title" :data="data" >
+      <br>
+      <h4>los minutos que hay en 5 horas son: {{minutos()}}</h4>
       
      
     </generic-container>
@@ -281,6 +283,17 @@
   </div>
   <div id="ejercicio24"  class="container" >
     <generic-container  :title="title" :data="data" >
+
+      <br>
+      <label for="opciones">seleccione las boletas a comprar:</label>
+      <select id="opciones" v-model="data.seleccion">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br>
+      <h4>pago a realizar: {{calcularPago()}}</h4>
       
      
     </generic-container>

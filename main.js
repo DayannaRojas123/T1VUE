@@ -458,7 +458,10 @@ Vue.component('generic-container', {
           // Agregar aquí los datos necesarios para el ejercicio 2
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          minutos(){
+
+            return 5*60
+          }
         }
       },
       {
@@ -473,10 +476,39 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 24',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          seleccion:null
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          calcularPago(){
+
+            
+            let entrada=10000
+
+            switch(this.data.seleccion){
+
+              case "1":
+              
+                return 10000;
+               
+              case "2":
+                return (entrada*2)-((entrada*2)*(10/100))
+                
+
+              case "3":
+
+                return (entrada*3)-((entrada*3)*(15/100))
+              
+              case "4":
+                return (entrada*4)-((entrada*4)*(20/100))
+               
+
+
+            }
+
+
+
+
+          }
         }
       },
       {
