@@ -565,7 +565,7 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 28',
         data: {
-          nn:null
+          nn:0
         },
         methods: {
           calcularFactorial(){
@@ -595,13 +595,36 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 30',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          entero:null
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          calcularPrimo(){
+
+            if(this.data.entero != null){
+
+              if (this.data.entero == 0 || this.data.entero == 1 || this.data.entero == 4) 
+              {
+                return 'no primo'
+              }
+   
+               
+               for (let x = 2; x < this.data.entero / 2; x++) 
+               { if (this.data.entero % x == 0)
+                 return 'no primo'
+        
+               }
+            return 'primo'
+
+
+
+            }
+
+          
+ 
+
         }
       },
-  
+    }
   ]
   
   exercises.forEach((exercise, index) => {

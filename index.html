@@ -361,7 +361,11 @@
   </div>
   <div id="ejercicio30"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
+      <br>
+      <label for="entero">ingrese un valor entero posistivo:</label>
+      <input type="number" id="entero" v-model="data.entero">
+      <br>
+      <h4>el numero ingresado es {{calcularPrimo()}}</h4>
      
     </generic-container>
   
