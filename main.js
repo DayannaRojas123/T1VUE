@@ -565,10 +565,22 @@ Vue.component('generic-container', {
       {
         title: 'Ejercicio 28',
         data: {
-          // Agregar aquí los datos necesarios para el ejercicio 2
+          nn:null
         },
         methods: {
-          // Agregar aquí los métodos necesarios para el ejercicio 2
+          calcularFactorial(){
+
+            let total=1
+            for(let i=this.data.nn;i>=1;i--){
+
+                total *=i
+
+            }
+
+            return total
+
+
+          }
         }
       },
       {

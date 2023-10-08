@@ -342,7 +342,12 @@
   </div>
   <div id="ejercicio28"  class="container" >
     <generic-container  :title="title" :data="data" >
-      
+      <br>
+      <label for="nn">ingrese cualquier numero:</label>
+      <input type="number" id="nn" v-model="data.nn">
+      <br>
+      <h4>el factorial del numero ingresado es: {{calcularFactorial()}}</h4>
+
      
     </generic-container>
   
