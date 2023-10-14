@@ -28,6 +28,7 @@
             <h1>Calculadora de Área de Cuadrado</h1>
             <label for="lado">Longitud del lado del cuadrado:</label>
             <input type="number" id="lado" v-model="lado" @input="calcularArea" />
+            <button v-on:click="calcularArea">Resultado</button>
             <p v-if="lado">El área del cuadrado es: {{ area }} unidades cuadradas</p>
 
     </generic-container>
