@@ -23,9 +23,13 @@
   <div id="ejercicio1" class="container" >
    
     <generic-container  :title="title" :data="data" >
-    
-      
-      <!-- Agregar aquí la estructura HTML específica del ejercicio -->
+        <br>
+
+            <h1>Calculadora de Área de Cuadrado</h1>
+            <label for="lado">Longitud del lado del cuadrado:</label>
+            <input type="number" id="lado" v-model="lado" @input="calcularArea" />
+            <p v-if="lado">El área del cuadrado es: {{ area }} unidades cuadradas</p>
+
     </generic-container>
     
   </div>

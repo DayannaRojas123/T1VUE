@@ -36,10 +36,13 @@ Vue.component('generic-container', {
     {
       title: 'Ejercicio 1',
       data: {
-        // Agregar aquí los datos necesarios para el ejercicio 1
+        lado: 0,
+        area: 0,
       },
       methods: {
-        // Agregar aquí los métodos necesarios para el ejercicio 1
+        calcularArea() {
+          this.area = this.lado * this.lado;
+        },
       }
     },
     {
